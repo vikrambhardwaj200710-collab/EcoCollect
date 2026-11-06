@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EcoCollect | E-waste collection</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+  <header>
+    <div class="container header-content">
+      <a class="brand" href="#top">EcoCollect</a>
+      <nav aria-label="Page sections">
+        <a href="#book-pickup">Book pickup</a>
+        <a href="#requests-table-section">Requests</a>
+        <a href="#history-section">History</a>
+        <a href="#contact">Contact us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="welcome">
+      <h1>Electronics recycling made easy</h1>
+      <p>Recycling recovers useful materials and reduces electronic waste. Book a pickup for your home or business below.</p>
+      <a class="button" href="#book-pickup">Book a pickup</a>
+    </section>
+
+    <div class="totals" aria-label="Collection totals">
+      <div class="green"><strong id="total-count">0</strong><span>Total requests</span></div>
+      <div class="yellow"><strong id="pending-count">0</strong><span>Awaiting a collector</span></div>
+      <div class="purple"><strong id="assigned-count">0</strong><span>Pickups scheduled</span></div>
+      <div class="blue"><strong id="completed-count">0</strong><span>Requests recycled</span></div>
+    </div>
+
+    <div class="booking-layout">
+      <section id="book-pickup" class="card">
+        <h2>Book an e-waste pickup</h2>
+        <form id="e-waste-form">
+          <div class="field">
+            <label for="userName">Name or company</label>
+            <input id="userName" type="text" maxlength="90" required>
+          </div>
+          <div class="field">
+            <label for="requesterType">Request for</label>
+            <select id="requesterType"><option>Household</option><option>Business</option></select>
+          </div>
+          <div class="field">
+            <label for="userPhone">Phone number</label>
+            <input id="userPhone" type="tel" maxlength="24" required>
+          </div>
+          <div class="field full">
+            <label for="userAddress">Pickup address</label>
+            <input id="userAddress" type="text" maxlength="220" required>
+          </div>
+          <div class="field">
+            <label for="itemCategory">Electronics category</label>
+            <select id="itemCategory" required>
+              <option value="">Select a category</option>
+              <option>Computers &amp; Laptops</option>
+              <option>Phones &amp; Tablets</option>
+              <option value="Screens &amp; TVs">Monitors &amp; TVs</option>
+              <option>Batteries &amp; Chargers</option>
+              <option>Small Appliances</option>
+              <option>Other Electronics</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="itemQuantity">Number of items</label>
+            <input id="itemQuantity" type="number" min="1" max="200" step="1" value="1" required>
+          </div>
+          <div class="field">
+            <label for="pickupDate">Pickup date</label>
+            <input id="pickupDate" type="date" required>
+          </div>
+          <div class="field">
+            <label for="pickupTime">Pickup window</label>
+            <select id="pickupTime" required>
+              <option value="Morning (9 AM - 12 PM)">Morning (9 am–12 pm)</option>
+              <option value="Afternoon (12 PM - 4 PM)">Afternoon (12–4 pm)</option>
+              <option value="Evening (4 PM - 7 PM)">Evening (4–7 pm)</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="itemNotes">Item notes (optional)</label>
+            <textarea id="itemNotes" rows="2" maxlength="400" placeholder="For example, two laptops without chargers"></textarea>
+          </div>
+          <div class="full">
+            <button type="submit">Send pickup request</button>
+            <p id="booking-message" class="feedback" role="status"></p>
+          </div>
+        </form>
+      </section>
+
+      <section class="card guide">
+        <h2>What we accept</h2>
+        <ul>
+          <li>Computers and laptops</li>
+          <li>Phones and tablets</li>
+          <li>Monitors and TVs</li>
+          <li>Batteries and chargers</li>
+          <li>Small household appliances</li>
+          <li>Other electronic accessories</li>
+        </ul>
+        <p>Back up your files and sign out of personal accounts before handing over your devices.</p>
+      </section>
+    </div>
+
+    <section id="requests-table-section" class="card">
+      <div class="section-heading">
+        <h2>Collection requests</h2>
+        <div class="filter">
+          <label for="statusFilter">Status</label>
+          <select id="statusFilter">
+            <option value="All">All statuses</option>
+            <option>Pending</option><option>Assigned</option>
+            <option>Collected</option><option>Recycled</option>
+          </select>
+        </div>
+      </div>
+      <p class="help">Choose a collector, then update the request when the items are collected and recycled.</p>
+      <p id="board-message" class="feedback" role="status"></p>
+      <div class="table-scroll" tabindex="0" aria-label="Collection requests">
+        <table>
+          <thead><tr><th scope="col">Requester</th><th scope="col">Items</th><th scope="col">Pickup details</th><th scope="col">Collector</th><th scope="col">Status and action</th></tr></thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+      <p id="empty-state-text" class="empty">Your pickup requests will appear here.</p>
+    </section>
+
+    <section id="history-section" class="card">
+      <h2>Collection history</h2>
+      <ul id="history-list"></ul>
+    </section>
+
+    <noscript><p>Enable JavaScript to add pickup requests and update their status.</p></noscript>
+  </main>
+
+  <footer id="contact">
+    <div class="container">
+      <h2>Contact us</h2>
+      <a href="mailto:vikram.bhardwaj200710@gmail.com">vikram.bhardwaj200710@gmail.com</a>
+      <p id="storage-note">Pickup requests are saved in this browser.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

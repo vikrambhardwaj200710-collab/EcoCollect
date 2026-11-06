@@ -1,0 +1,360 @@
+/* Basic page colours, spacing and text */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #f7f8f1;
+  color: #234535;
+  font: 15px/1.5 Arial, sans-serif;
+}
+h1, h2, p {
+  margin: 0;
+}
+h2 {
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+a {
+  color: #1f6347;
+}
+button, input, select, textarea {
+  font: inherit;
+}
+a:focus, button:focus, input:focus, select:focus, textarea:focus, .table-scroll:focus {
+  outline: 3px solid #378461;
+  outline-offset: 2px;
+}
+.container {
+  width: 92%;
+  max-width: 1050px;
+  margin: auto;
+}
+header {
+  background: white;
+  border-bottom: 1px solid #dae3d6;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 0;
+}
+.brand {
+  font-size: 27px;
+  font-weight: bold;
+  text-decoration: none;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+nav a {
+  font-size: 14px;
+  text-decoration: none;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+main {
+  padding-top: 22px;
+}
+.welcome {
+  padding: 28px;
+  border-radius: 12px;
+  background: #d9efdb;
+}
+h1 {
+  font-size: 36px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.welcome p {
+  margin-bottom: 17px;
+  color: #46614e;
+}
+.button, button {
+  display: inline-block;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 6px;
+  background: #216447;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.button:hover, button:hover {
+  background: #174d35;
+}
+
+/* Four simple collection counters */
+.totals {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 18px 0;
+}
+.totals > div {
+  padding: 15px 17px;
+  border-radius: 9px;
+}
+.totals strong {
+  display: block;
+  font-size: 27px;
+  line-height: 1.2;
+}
+.totals span {
+  font-size: 12px;
+}
+.green {
+  background: #dceecf;
+}
+.yellow {
+  background: #ffedb4;
+}
+.purple {
+  background: #e8dff4;
+}
+.blue {
+  background: #dcecf5;
+}
+
+/* Booking form and accepted items */
+.booking-layout {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 18px;
+  align-items: start;
+}
+.card {
+  min-width: 0;
+  background: white;
+  padding: 23px;
+  border: 1px solid #d8e1d4;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.field {
+  min-width: 0;
+}
+.field label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 13px;
+  font-weight: bold;
+}
+input, select, textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 9px;
+  border: 1px solid #adbfad;
+  border-radius: 5px;
+  color: #234535;
+  background: white;
+  font-size: 14px;
+}
+textarea {
+  resize: vertical;
+}
+.full {
+  grid-column: 1 / -1;
+}
+.guide {
+  background: #fff2cf;
+}
+.guide ul {
+  margin: 0 0 20px;
+  padding-left: 19px;
+}
+.guide li {
+  margin-bottom: 10px;
+}
+.guide p {
+  padding-top: 14px;
+  border-top: 1px solid #e4d5a8;
+  color: #5d633e;
+  font-size: 13px;
+}
+.feedback {
+  color: #24573e;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.feedback.error {
+  color: #a02f25;
+}
+
+/* Requests table and collection history */
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.section-heading h2 {
+  margin: 0;
+}
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+.filter select {
+  width: 130px;
+}
+.help {
+  color: #536a56;
+  font-size: 13px;
+  margin: 12px 0;
+}
+.table-scroll {
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+th, td {
+  padding: 11px 10px;
+  font-size: 13px;
+  border-bottom: 1px solid #e1e7dd;
+  vertical-align: top;
+}
+th {
+  background: #edf4e7;
+  font-size: 12px;
+}
+td {
+  overflow-wrap: anywhere;
+}
+td small, #history-list small {
+  display: block;
+  margin-top: 4px;
+  color: #576e5b;
+  font-size: 12px;
+}
+.collector-select {
+  min-width: 120px;
+  padding: 6px;
+  font-size: 13px;
+}
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.pending {
+  background: #ffedb4;
+  color: #74500b;
+}
+.assigned {
+  background: #e8dff4;
+  color: #593d78;
+}
+.collected {
+  background: #dcecf5;
+  color: #33596c;
+}
+.recycled {
+  background: #dceecf;
+  color: #305a31;
+}
+.row-action {
+  display: block;
+  padding: 5px 8px;
+  margin-top: 7px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.empty {
+  margin-top: 15px;
+  color: #576e5b;
+  font-size: 14px;
+}
+#history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#history-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  border-top: 1px solid #e1e7dd;
+  font-size: 14px;
+}
+#history-list .empty-history {
+  color: #576e5b;
+}
+footer {
+  background: #214d37;
+  color: white;
+  padding: 25px 0;
+}
+footer h2 {
+  margin-bottom: 8px;
+  font-size: 21px;
+}
+footer a {
+  color: #f4e4a5;
+  overflow-wrap: anywhere;
+}
+footer p {
+  margin-top: 14px;
+  font-size: 12px;
+  color: #d6e7d6;
+}
+
+/* The same sections stack on smaller screens. */
+@media (max-width: 750px) {
+  .booking-layout {
+    grid-template-columns: 1fr;
+  }
+  .totals {
+    grid-template-columns: 1fr 1fr;
+  }
+  .header-content {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  nav {
+    gap: 17px;
+  }
+  table {
+    min-width: 680px;
+  }
+}
+@media (max-width: 450px) {
+  .welcome, .card {
+    padding: 19px;
+  }
+  h1 {
+    font-size: 29px;
+  }
+  form {
+    grid-template-columns: 1fr;
+  }
+  nav {
+    gap: 15px;
+  }
+  nav a {
+    font-size: 13px;
+  }
+}
